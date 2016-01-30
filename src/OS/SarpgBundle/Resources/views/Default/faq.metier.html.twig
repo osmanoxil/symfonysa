@@ -1,0 +1,61 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+
+        <h1>{{ "Détail sur les métier"|trans }}s</h1>
+        <p>{{ "Vous trouverez ici des informations sur les différents métiers de SARPG !"|trans }}</p>
+
+        <div class="ui-tabs ui-widget ui-widget-content ui-corner-all ui-tabs-vertical ui-helper-clearfix" id="tabs" style="margin: auto;">
+            <ul role="tablist" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+                <li aria-selected="false" aria-labelledby="ui-id-1" aria-controls="tabs-1" tabindex="-1" role="tab" class="ui-state-default ui-corner-left"><a id="ui-id-1" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#tabs-1">{{ "Simple Policier"|trans }}</a></li>
+                <li aria-selected="false" aria-labelledby="ui-id-2" aria-controls="tabs-2" tabindex="-1" role="tab" class="ui-state-default ui-corner-left"><a id="ui-id-2" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#tabs-2">{{ "FBI"|trans }}</a></li>
+                <li aria-selected="false" aria-labelledby="ui-id-3" aria-controls="tabs-3" tabindex="-1" role="tab" class="ui-state-default ui-corner-left"><a id="ui-id-3" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#tabs-3">{{ "C.I.A"|trans }}</a></li>
+                <li aria-selected="false" aria-labelledby="ui-id-4" aria-controls="tabs-4" tabindex="-1" role="tab" class="ui-state-default ui-corner-left"><a id="ui-id-4" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#tabs-4">{{ "Militaire"|trans }}</a></li>
+                <li aria-selected="false" aria-labelledby="ui-id-5" aria-controls="tabs-5" tabindex="-1" role="tab" class="ui-state-default ui-corner-left"><a id="ui-id-5" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#tabs-5">{{ "Pompier"|trans }}</a></li>
+                <li aria-selected="false" aria-labelledby="ui-id-6" aria-controls="tabs-6" tabindex="-1" role="tab" class="ui-state-default ui-corner-left"><a id="ui-id-6" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#tabs-6">{{ "Médecin"|trans }}</a></li>
+                <li aria-selected="false" aria-labelledby="ui-id-7" aria-controls="tabs-7" tabindex="-1" role="tab" class="ui-state-default ui-corner-left"><a id="ui-id-7" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#tabs-7">{{ "Taxi"|trans }}</a></li>
+                <li aria-selected="false" aria-labelledby="ui-id-8" aria-controls="tabs-8" tabindex="-1" role="tab" class="ui-state-default ui-corner-left"><a id="ui-id-8" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#tabs-8">{{ "Prostituée"|trans }}</a></li>
+                <li aria-selected="true" aria-labelledby="ui-id-9" aria-controls="tabs-9" tabindex="0" role="tab" class="ui-state-default ui-corner-left ui-tabs-active ui-state-active"><a id="ui-id-9" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#tabs-9">{{ "Mécanicien"|trans }}</a></li>
+            </ul>
+            <div style="display: none;" aria-hidden="true" aria-expanded="false" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-1" id="tabs-1">
+                <h2>{{ "Simple policier"|trans }}</h2>
+                <p>{{ "Les forces de polices de San Andreas sont répartis sur 5 commissariat au choix. Ils ont à leur disposition un arsenal de base et de nombreux véhicules.
+                    Ils disposent de diverses commandes pour combattre le crime:
+                    Mettre en place des barrages de circulation (avec le statut Joueur Régulier), dresser des PV aux criminels de couleur jaune, fouiller des suspects, menotter et détenir les criminels à partir de 4 étoiles de recherches pour les emmener en prison.
+                    Ils ont également l'autorisation d'abattre tout criminel orange ou rouge."|trans }}</p>
+            </div>
+            <div aria-hidden="true" aria-expanded="false" style="display: none;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-2" id="tabs-2">
+                <h2>{{ "FBI"|trans }}</h2>
+                <p>{{ "Classe plus évoluée de policiers, les membres du FBI ont à leur disposition un QG dans chaque ville avec de meilleures armes et des véhicules plus performants. Les commandes sont les mêmes que celles des policiers de base."|trans }}</p>
+            </div>
+            <div aria-hidden="true" aria-expanded="false" style="display: none;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-3" id="tabs-3">
+                <h2>{{ "C.I.A"|trans }}</h2>
+                <p>{{ "Accessible uniquement sur la boutique du site (500 crédits), la classe CIA est un statut qui donne le choix entre 3 QG et offre l'accès à un équipement High-Tech: gilet pare-balle d'origine, bouclier anti-émeutes, hélicoptère mitrailleur seasparrow, bateaux rapides, antenne de surveillance, et des motos NRG disponibles avec le statut VIP."|trans }}</p>
+            </div>
+            <div aria-hidden="true" aria-expanded="false" style="display: none;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-4" id="tabs-4">
+                <h2>{{ "Militaire"|trans }}</h2>
+                <p>{{ "Les recrues de l'Armée de San Andreas sont spécialisées dans le pilotage d'engins lourds: hélicoptère bombardier, char d'assaut, avion de chasse...
+                    Avec ses 4 bases disséminées sur la carte, l'armée est un atout majeur dans la lutte contre la criminalité. Ce grade qui ne peut être obtenu que par candidature sur le forum est réservé aux joueurs les plus motivés. (1500 points, 100 levels de policier)"|trans }}</p>
+            </div>
+            <div aria-hidden="true" aria-expanded="false" style="display: none;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-5" id="tabs-5">
+                <h2>{{ "Pompier"|trans }}</h2>
+                <p>{{ "Sur SARPG, les soldats du feu ne manquent pas de travail! Depuis leurs bases situées dans chaque ville et grâce à leurs véhicules spéciaux, ils doivent maîtriser les nombreux incendies accidentels ou criminels.
+                    Les pompiers ont également une radio à leur disposition et la possibilité de mettre en place des barrages de circulation. (avec le statut Joueur régulier"|trans }})</p>
+            </div>
+            <div aria-hidden="true" aria-expanded="false" style="display: none;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-6" id="tabs-6">
+                <h2>{{ "Médecin"|trans }}</h2>
+                <p>{{ "La classe des médecins a le devoir de soigner les joueurs qui font appel à eux, pour restaurer leur vie ou guérir une MST."|trans }}</p>
+            </div>
+            <div aria-hidden="true" aria-expanded="false" style="display: none;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-7" id="tabs-7">
+                <h2>{{ "Taxi"|trans }}</h2>
+                <p>{{ "Où que vous soyez sur la carte, les chauffeurs de taxi assurent votre transport jusqu'à la destination de votre choix."|trans }}</p>
+            </div>
+            <div aria-hidden="true" aria-expanded="false" style="display: none;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-8" id="tabs-8">
+                <h2>{{ "Prostituée"|trans }}</h2>
+                <p>{{ "Le métier de prostituée apporte une touche de douceur et de détente pour les loisirs des joueurs. Moyennant une rémunération, elles vous feront goûter à leurs spécialités. Leur QG est le célèbre Jizzy de San Fierro."|trans }}</p>
+            </div>
+            <div aria-hidden="false" aria-expanded="true" style="display: block;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-9" id="tabs-9">
+                <h2>{{ "Mécanicien"|trans }}</h2>
+                <p>{{ "Les mécaniciens répondent aux appels des joueurs pour réparer leur véhicule. Ils assurent aussi la mise en fourrière dans les différentes villes."|trans }}</p>
+            </div>
+        </div>
+{% endblock %}

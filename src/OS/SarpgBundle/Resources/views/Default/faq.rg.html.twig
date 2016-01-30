@@ -1,0 +1,207 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <div id="ctn">
+
+        <h1>{{ "Détail sur les réglements"|trans }}</h1>
+        <p>{{ "Vous trouverez ici des informations sur les différents réglements du serveur."|trans|raw }}</p>
+
+        <div class="ui-tabs ui-widget ui-widget-content ui-corner-all ui-tabs-vertical ui-helper-clearfix" id="tabs" style="margin: auto;">
+            <ul role="tablist" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+                <li aria-selected="true" aria-labelledby="ui-id-1" aria-controls="tabs-1" tabindex="0" role="tab" class="ui-state-default ui-corner-left ui-tabs-active ui-state-active"><a id="ui-id-1" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#tabs-1">Règlement JR</a></li>
+                <li aria-selected="false" aria-labelledby="ui-id-2" aria-controls="tabs-2" tabindex="-1" role="tab" class="ui-state-default ui-corner-left"><a id="ui-id-2" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#tabs-2">Règlement Serveur</a></li>
+            </ul>
+            <div style="display: block;" aria-hidden="false" aria-expanded="true" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-1" id="tabs-1">
+                <h2>{{ "Règlement Joueurs Réguliers"|trans|raw }}</h2>
+
+
+
+                <p style="color:red">{{ "Ce qui est interdit :"|trans|raw }}  </p> <br>
+
+
+
+                <h3>{{ "Règle n°1 : Il est interdit d'abuser et de placer n'importe comment les barrages (/BR)  il est interdit de (/suptoutbr) sans demander au autres flics et pompiers !"|trans|raw }}
+                    <img src="http://zupimages.net/up/15/13/sx1a.png" height="352" width="450">
+
+                    <br><br>
+
+                </h3><h3>
+                    {{ "Règle n°2 : Il est interdit de bloquer l'accès aux QG des TEAMS (Ballas, Grove, RAID, SWAT, DEA, Biker'S, Vagos,Rifa) ou de la POLICE."|trans|raw }}
+                    <img src="http://zupimages.net/up/15/13/j5zx.png" height="352" width="450">
+
+                    <br><br>
+                    {{ " Règle n°3 : Il est interdit de faire des barrages routiers sans passages et sans surveillance et il doit avoir un passage pour tout type de véhicule."|trans|raw }}
+
+
+                    <img src="http://zupimages.net/up/15/13/1dz4.png" height="352" width="450">
+
+                    <br><br>
+                    {{ "Règle n°4 : Il est interdit d'utiliser le /AFK à des fins abusives : pour éviter la mort. (Le /AFK n'est pas disponible lorsque vous êtes recherchés)"|trans|raw }}
+
+                    <img src="http://zupimages.net/up/15/13/r95b.png" height="352" width="450">
+
+                    <br><br>
+
+                    {{ "Règle n°5 : Il est interdit de placer des herses sous les roues d'un véhicule alors que la personne auquel appartient ce dernier est blanc"|trans|raw }}
+                    <img src="http://zupimages.net/up/15/13/221i.png" height="352" width="450">
+
+
+                    {{ "Règle 6: Il est interdit de suptoutbr ou de rajouter des BR en events"|trans|raw }}
+
+                    <br><br></h3>
+                <p style="color:green"> {{ " Ce qui est autorisé :"|trans|raw }} </p>
+                <br><br><h3>
+                    {{ "Possibilité n°1 : Établir un barrage de contrôle, sous surveillance et correctement installé."|trans|raw }}
+                </h3>
+
+                <img src="http://zupimages.net/up/15/13/evew.png" height="352" width="450">
+
+
+                <br><br><h3>
+                    {{ "Possibilité n°2 : Utiliser le /AFK pour éviter la mort lorsque vous êtes en situation de Deathmatch, ce qui vous laisse le temps de /REPORT le joueur sans mourir. (A NE PAS EN ABUSER)"|trans|raw }}
+
+                     <img src="http://zupimages.net/up/15/13/xoez.png" height="352" width="450">
+
+
+                </h3>
+                <br><br><h3>
+                    {{ "Possibilité n°3 : il est autorisé de placer une herse sous les roues d'un véhicule à condition que le propriétaire soit orange ou rouge"|trans|raw }}
+
+                    <img src="http://zupimages.net/up/15/13/seju.png" height="352" width="450">
+
+                </h3>
+            </div>
+            <div aria-hidden="true" aria-expanded="false" style="display: none;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-2" id="tabs-2">
+                <h1 style="text-align:center;"><span style="color:#FF0000;"><span style="font-family:'comic sans ms', cursive;"><strong>Règlement IG</strong></span></span></h1>
+
+                <h3 style="text-align:center;"><span style="font-family:'comic sans ms', cursive;"><strong>/regles &amp; /pc</strong></span></h3>
+
+                <h3 style="text-align:center;">Si vous êtes témoin d'un non-respect des règles, veuillez utiliser la commande /report</h3>
+
+                <h2><strong><span style="color:#ff6633;"># 1 - Les interdictions principales </span></strong></h2>
+
+                <p><strong>1.1 - Le deathmatch (DM) est stictement Interdit !</strong></p>
+
+                <p>Le deathmatch est le fait de tirer ou de tuer un joueur sans raison. Il est punissable d'avertissements, d'emprisonnement voir même de kick/bannissement du serveur.</p>
+
+                <p><span style="color:#FF0000;">- Attention, on ne répond pas au deathmatch par du deathmatch !</span> Si vous êtes victime de DM, utilisez la commande <span style="color:#A52A2A;">/report (ID) (raison)</span> pour reporter le joueur.<br>
+                    Au lieu de crier DM dans le chat, reportez directement. Vous disposez d'environ 15 secondes pour reporter le joueur afin que le report automatique puisse agir !</p>
+
+                <p><span style="color:#FF0000;"><strong> - Rappel : </strong></span>un joueur qui vous vise avec son arme n'est pas une raison valable pour lui tirer dessus. Il en est de même pour la carjacking et le vol d'un vehicule !<br>
+                    <br><strong><span style="color:#0000FF;">1) Quand tirer sur un flic ?</span></strong><br>
+                    Pour pouvoir tirer sur un flic, vous devez avoir obligatoirement <span style="color:#FF8C00;">4 étoiles minimum (couleur orange).</span> Si ce n'est pas le cas, <span style="color:#40E0D0;">le flic</span> pourra utiliser la commande<span style="color:#FF0000;"> /report (ID) (raison) </span>pour vous dénoncer !<br><span style="color:#FF0000;">    Faites attention à votre niveau de recherche</span> car si vous êtes blanc ou de <strong><span style="color:#FFD700;">couleur jaune </span></strong>et vous vous attaquez à <span style="color:#3366ff;"><strong>un flic</strong> </span>sa sera <span style="color:#FF0000;">du Deathmatch.</span></p>
+
+                <p><strong><span style="color:#FF8C00;">2) Quand tirer sur un civil ?</span></strong><br>
+                    Vous pouvez tirer sur un joueur dès qu'il vous a /voler ou /violer ou /kidnap. Ainsi que si un zombie vous a mordu (/mordre) mais à partir du moment ou vous vous transformez vous faite partie de sa famille donc vous ne pouvez plus le tuer.<br><span style="color:#B22222;"><em>    *En revanche, si vous êtes l'agresseur vous n'avez pas le droit d'attaquer votre victime ! Vous devez fuir le plus rapidement possible !<br>
+                            *Attention, vous ou si votre agresseur meurt, vous ne pourrez plus lui tirer dessus.<br>
+                        </em></span><br><strong>    &gt; 1.2 - Le Teamkill (TK)</strong><br>
+                    Faire un teamkill est le fait de tirer/tuer sur vos coéquipiers. Ceci est formellement interdit. Les sanctions sont les mêmes que pour le DM.<br>
+                    <br><strong>    &gt; 1.3 - Le Spawnkill</strong><br>
+                    Le Spawnkill est interdit dans les QG flics mais également dans les QG des teams (Ballas, Grove, Vagos, etc.). Il consiste à tirer voir même tuer les joueurs au moment où il apparaissent sur la map. Cette pratique est interdite car elle bloque tout simplement le jeu et dégoûte les joueurs.<br>
+                    <br>
+                    ! Faire une Deathlist de flics, ne signifie pas forcément que c'est du spawnkill (pour les QG flics le spawnkill commence une fois que vous avez passer la grille du garage).<br>
+                    <br><strong>    &gt; 1.4 - Le Helikill</strong><br>
+                    Est le fait de tuer un joueur avec les hélices de son hélicoptère = INTERDIT. Si cela arrive, vous serez sanctionné automatiquement par la mort ou vous recevrez un avertissement.  <br>
+                    <br>
+                    <strong>  &gt; 1.5 - Le Coup de pare-choc</strong><br>
+                    Le coups de pare-chocs consiste à faire tomber une personne avec sa voiture ! Il est autorisé uniquement pour les flics !<br>
+                    ! Attention, le coups de pare-choc n'est pas un carkill, il est donc interdit de rester avec sa voiture sur un joueur.<br>
+                    <br>
+                    <strong>   &gt; 1.6 - Le Carkill</strong><br>
+                    Le Carkill n'est pas à confondre avec le coup de pare-chocs, il s'agit du fait d'écraser un joueur mais de le laisser sous votre véhicule, il s'agit également de rouler sur un joueur à pluieurs reprises. Si cela arrive vous serez sanctionné automatiquement par la mort ou vous recevrez un avertissement.<br>
+                    <br>
+                    <strong> &gt; 1.7 - Le Drive-By-Foot (DBF)</strong><br>
+                    Le Drive-By-Foot (DBF) est le fait de tirer sur un joueur n'étant pas dans un véhicule alors que vous, vous l'êtes. Néanmoins les membre du statut CIA ou militaire ont le droit de tirer sur un criminel (rouge pour militaire) depuis un véhicule special (sparrow hydra rhino hunter).<br>
+                    <br>
+                    *Si jamais vous le faites, un message d'avertissement apparaîtra sur votre écran, ensuite, si vous continuez à tirer sur le "piéton" alors que vous êtes dans un véhicule, votre vie diminuera progressivement tandis que celle de votre victime ne diminuera pas.<br>
+                    <br>
+                    <strong>  &gt; 1.8 - Déconnexion en kidnap/detenir/men</strong><br>
+                    La déconnexion en étant kidnappé &amp; détenu ou menotté est interdite.<br>
+                    Un temps de prison allant de 200s à 700s vous sera appliqué en cas de non respect de cette règle.<br>
+                    <br><strong>    &gt; 1.9 - L'alliance</strong><br>
+                    L'alliance entre Flic et Criminel est interdite sous peine de sanction.<br>
+                    <br><strong>    &gt; 1.10 </strong>- Bordel avec un véhicule<br>
+                    Il est interdit de faire le bordel qui a pour but de nuire aux autres joueurs avec un véhicule (AT-400, Dump-Truck (Dumper), Monster-Truck...).</p>
+
+                <p>    &gt; 1.11 - Monter sur un véhicule</p>
+
+                <ul><li class="ui-corner-left">  Il est interdit de monter sur un véhicule car il peut y avoir des risques de DBF (Drive By Foot, voir règle 1.7) pour celui qui vous tire dessus en étant dans un véhicule. Vous pouvez monter sur un véhicule à une seule condition : tuer votre agresseur qui est en train de conduire le véhicule. Vous pourrez néanmoins monter sur un seul véhicule qui est le DFT-30 :</li>
+                </ul><p>    Spoiler</p>
+
+                <h4><span style="color:#FF0000;"><span style="font-size:18px;">   </span><strong><span style="font-size:20px;"> # 2 - Event :</span></strong></span><br>
+                    <br>
+                    Nous vous rappelons qu'en event toutes les commandes sont interdites (sauf exception) mise à part le /relax et /stop.<br>
+                    En arrivant dans un event, suivez les consignes de l'administrateur. Il faut savoir qu'un event prend du temps à être préparé, respectez donc le travail des administrateurs en respectant leurs consignes. Tout le monde sera content et l'event se déroulera dans les meilleurs conditions possible.<br>
+                    Si vous ne respectez pas les ordres des administrateurs, vous serez sanctionné.</h4>
+
+                <p><span style="color:#FF0000;"><strong><span style="font-size:20px;">   </span><u><span style="font-size:20px;"> # 3 - Les Abus :</span></u></strong></span><br>
+                    <br><strong>    &gt; 3.1 - Les abus eaux</strong><br>
+                    Seul les forces de l'ordre ont le droit de vous noyer avec des canons à eaux si vous êtes recherchés !<br>
+                    Dans le cas contraire, ceci sera considéré comme un abus eau. Il en est de même pour les civils noyant les autres joueurs : interdit !<br>
+                    <br><strong>    &gt; 3.2 - Les abus G</strong><br>
+                    L'Abus G est strictement Interdit. L'abus G est le fait de se positionner en passager pour éviter de mourir ou passer un mapping. Cette règle s'applique de même pour les Policiers qui, se positionne en passager pour taper leur commandes (gagner du temps).<br>
+                    <br>
+                    <strong> &gt; 3.3 - Les abus mapping</strong><br>
+                    Toutes les commandes à travers un mapping sont interdite !<br>
+                    <br>
+                    <strong>&gt; 3.4 - Les Use Bug</strong><br>
+                    Tout Use bug sont strictement interdit sauf celui pour la moto, il est interdit comme tout type d'abus.<br>
+                    <br>
+                    <strong>  &gt; 3.4 - Les RW en étant /detenir /men /kidnapper sont interdits</strong></p>
+
+                <p><span style="color:#FF0000;"><strong><span style="font-size:20px;">    # 4 - Les Cheats, Publicité, Bannissements :</span></strong></span><br>
+                    <br>
+                    &gt;<strong> 4.1 - Utiliser un cheat/hack ou quelconque mod avantageux est interdit</strong><br>
+                    (cheat vie, speedhack, cheat argent, cheat armes, spawn de véhicule, etc...)<br>
+                    Le serveur est équipé d'un anticheat, si celui-ci détecte la moindre triche, le bannissement se fera de manière automatique.<br>
+                    Il en est de même si un administrateur vous surprend en train de tricher.</p>
+
+                <p>    - Rappel : Si vous voyez un joueur cheater, faites de suite /report (ID) cheat sans crier dans le chat. Même si le temps de bannissement vous parait long, il y a forcément un administrateur qui surveille le joueur. Donc ne dites rien en chat général et continuez à jouer normalement !<br>
+                    Si il n'y a pas d'administrateur faite un screen à l'aide de votre touche F8 et puis postez un report sur le forum.<br>
+                    <br>
+                    <strong>&gt; 4.2 - Publicité</strong><br>
+                    La publicité pour un autre serveur est interdite. Si vous vous faites surprendre, vous serez bannis d'office.<br>
+                    <br>
+                    <strong>&gt; 4.3 -Les bannissements</strong><br>
+                    En cas d'infraction aux règles, vous pouvez écoper d'un bannissement.<br>
+                    Celui-ci peut être temporaire, c'est à dire qu'aux bout de quelques minutes ou quelques jours, le débannissement se fera de manière automatique.<br>
+                    Ou, il peut être définitif. Vous pouvez toujours tenter de vous faire dé-bannir en faisant une demande dans la section approprié du forum en respectant le formulaire ! Le ban-évade est bien entendu strictement interdit !</p>
+
+                <p><span style="color:#FF0000;"><strong><span style="font-size:20px;">    # 5 - Le Respect :</span></strong></span><br>
+                    <br>
+                    Vous vous engagez à toujours respecter les joueurs et à ne pas les insulter (injures raciales, propos haineux, discriminatoires, homophobes, etc...), les provoquer.<br>
+                    <br>
+                    - Rappel : même en pm, les insultes sont formellement interdites.<br>
+                    Si vous êtes victime d'insultes, nous vous invitons à faire une copie d'écran de votre jeu (touche F8 ou Impr sys) et de reporter le joueur sur le forum.<br>
+                    Toute forme de provocation ou de langage irrespectueux est interdit.<br>
+                    Sanctions possibles : mute, kick, bannissement.</p>
+
+                <p><strong><span style="font-size:20px;"><span style="color:rgb(255,0,0);">    # 6 - Départ du serveur :</span></span></strong><br>
+                    <br>
+                    Tout joueur ayant annoncé son départ ou étant absent depuis plus d'un mois, devra attendre un délai minimum de 3 semaines.</p>
+
+                <p>Citation</p>
+
+                <p><strong>    <span style="color:#FF0000;"><span style="font-size:20px;"># 7 TEAM</span></span></strong></p>
+
+                <p>    Il est interdit de rentrer dans un QG d'une team sans invitation. Si un membre de cette team vous voit , il as le pouvoir de vous tuer si il vous dit le début de la minute QG et la minute QG avec votre Pseudo.<br>
+                    Si le joueur ne vous a pas dit la minute QG , c'est du DM donc vous avez le droit de report.<br>
+                    Concernant Les membres qui sont virés ou qui ont quittés la team :<br>
+                    Pour les VIP :<br>
+                    tous les membres VIP qui se feront virer d'une team pour faute grave* perdront le statut VIP définitivement. Ils pourront re-poster VIP, 2 mois après.<br>
+                    tous les membres VIP qui se feront virer d'une team pour une " petite faute "* seront suspendus du statut VIP pendant 3 semaines (délai inter-team).<br>
+                    Pour les joueurs :<br>
+                    tous les membres qui se feront virer ou qui ont quittés une team pour une faute devront attendre pendant 3 semaines pour reposter (délai inter-team).<br>
+                    tous les membres qui se feront quittés une team pandant la période de test devront attendre pendant 2 semaines pour reposter (délai inter-team).</p>
+
+                <p> </p>
+
+                <p><span style="color:#FF0000;">Si vous pensez être victime d'un abus de pouvoir d'un administrateur, nous vous invitons à le reporter dans la section forum adéquate.<br>
+Il sera traité par l'administrateur général du serveur.</span><br>
+                    <br><span style="color:#FF8C00;">Il est strictement interdit de s'investir dans d'autre serveur du même type que SARPG (RPG) sous peine de RAZ de votre compte et bannissement .</span></p>
+
+                <p> </p>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

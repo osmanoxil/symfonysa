@@ -1,0 +1,79 @@
+os_sarpg_homepage:
+    path:     /
+    defaults: { _controller: OSSarpgBundle:Default:index, _locale: fr }
+os_sarpg_changerlangue:
+    path:     /changelanguage/{langue}
+    defaults: { _controller: OSSarpgBundle:Default:changelanguage}
+os_sarpg_fr:
+    path:     /f
+    defaults: { _controller: OSSarpgBundle:Default:french}
+os_sarpg_en:
+    path:     /eng
+    defaults: { _controller: OSSarpgBundle:Default:anglais}
+os_sarpg_faq:
+    path:     /faq/
+    defaults: { _controller: OSSarpgBundle:Default:faq}
+os_sarpg_faq_metiers:
+    path:     /faq/metiers/
+    defaults: { _controller: OSSarpgBundle:Default:faqMetier}
+os_sarpg_faq_reglement:
+    path:     /faq/rg/
+    defaults: { _controller: OSSarpgBundle:Default:faqRg}
+os_sarpg_faq_privilege:
+    path:     /faq/statut/
+    defaults: { _controller: OSSarpgBundle:Default:faqStatut}
+    # JOUEUR
+os_sarpg_joueur_voir:
+    path:     /joueur/voir/{id}
+    defaults: { _controller: OSSarpgBundle:JoueurVoir:index }
+os_sarpg_joueur_voir_me:
+    path:     /joueur/voir/
+    defaults: { _controller: OSSarpgBundle:JoueurVoir:voirme }
+os_sarpg_record:
+    path:     /joueur/record
+    defaults: { _controller: OSSarpgBundle:JoueurVoir:record}
+os_sarpg_classement:
+    path:    /joueur/classement/
+    defaults: { _controller: OSSarpgBundle:JoueurVoir:classement}
+os_sarpg_classement_pages:
+    path:    /joueur/classement/page/{page}
+    defaults: { _controller: OSSarpgBundle:JoueurVoir:classementPages}
+    # root
+os_sarpg_root:
+    path:     /vote/root
+    defaults: { _controller: OSSarpgBundle:Vote:root}
+os_sarpg_rpg:
+    path:     /vote/
+    defaults: { _controller: OSSarpgBundle:Vote:RPG}
+os_sarpg_search:
+    path:     /search/
+    defaults: { _controller: OSSarpgBundle:JoueurVoir:search}
+    #boutique
+os_sarpg_paypal:
+    path:    /paypal
+    defaults: { _controller: OSSarpgBundle:Store:paypal}
+os_sarpg_store:
+    path:     /boutique/
+    defaults: { _controller: OSSarpgBundle:Store:index}
+os_sarpg_store_rename:
+    path:     /boutique/rename/
+    defaults: { _controller: OSSarpgBundle:Store:rename}
+os_sarpg_store_cia:
+    path:     /boutique/cia/
+    defaults: { _controller: OSSarpgBundle:Store:cia}
+os_sarpg_store_jr:
+    path:     /boutique/jr/
+    defaults: { _controller: OSSarpgBundle:Store:jr}
+os_sarpg_store_pts:
+    path:     /boutique/pts/
+    defaults: { _controller: OSSarpgBundle:Store:pts}
+os_sarpg_switch:
+    path:     /switch/{language}/
+    defaults: { _controller: OSSarpgBundle:Default:language}
+    requirements:
+      language: en|fr|es|ar
+
+    #panel
+os_sarpg_admin:
+    path:     /admin
+    defaults: { _controller: OSSarpgBundle:Default:admin}

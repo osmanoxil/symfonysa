@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+	    <meta charset="UTF-8" />
+        <title>Liste des catégories | SARPG Panel</title>
+        {% block css %}
+        <link rel="stylesheet" href="{{ asset('gestion/css/style.css') }}" />
+        <link rel="stylesheet" href="{{ asset('gestion/js/jwysiwyg/jquery.wysiwyg.old-school.css') }}" />
+		<link rel="stylesheet" href="{{ asset('gestion/content/settings/style.css') }}" />
+		<link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        {% endblock css %}
+        <!-- jQuery AND jQueryUI -->
+        {% block js %}
+        <script type="text/javascript" src="{{ asset('gestion/js/jquery-1.6.2.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('gestion/js/jquery-ui-1.8.16.custom.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('gestion/js/min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('gestion/js/ajax.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('gestion/content/settings/main.js') }}"></script>
+		{% endblock js %}
+   </head>
+    <body class="wood dark">
+		<div id="footImg"></div>
+        <!--              
+                HEAD
+                        -->
+		        <div id="head">
+            <div class="left">
+                <a href="#" class="button profile"><img src="{{ asset('gestion/img/icons/top/huser.png') }}" alt="" /></a>
+                Bonjour, 
+                <a href="joueur.php?id=23869">MiDiS</a>
+                |
+				<a href="joueur.php?c=Admin">Admin Confirmé</a>
+				|
+				<a href="../">retour  site</a>
+				|
+				<a href="http://forum.sarpg.fr">Retour forum</a>
+                | 
+                <a href="../deconnexion?q=166c87426e624356d1409c6c5a369b00f981b14e">Se déconnecter </a>
+            </div>
+            <div class="right">
+                <form action="recherche.php" method="get" id="search" class="search placeholder">
+                    <input type="text" value="" name="q" class="text" placeholder="Recherche..." />
+                    <input type="submit" value="rec hercher" class="submit"/>
+                </form>
+            </div>
+        </div>
+		
+		        <!--            
+					SIDEBAR
+							--> 
+        <div id="sidebar" class="black">
+            <ul>
+                <li>
+                    <a href="index.php">
+                        <img src="{{ asset('gestion/img/icons/menu/inbox.png') }}" alt="" />
+                        Accueil 
+                    </a>
+                </li>
+                <li class="nosubmenu"><a href="joueur.php"><img src="{{ asset('gestion/img/icons/menu/users.png') }}" alt="" /> Joueurs </a></li>
+				<li><a href="#"><img src="{{ asset('gestion/img/icons/menu/shirt.png') }}" alt="" /> Teams</a>
+					<ul>
+						<li><a href="joueur.php?t=Ballas">Liste des   Ballas</a></li>
+						<li><a href="joueur.php?t=Biker">Liste des    Biker'S</a></li>
+                        <li><a href="joueur.php?t=Groove">Liste des    Groves</a></li>
+                        <li><a href="joueur.php?t=RAID">Liste des   RAID</a></li>
+						<li><a href="joueur.php?t=Rifa">Liste des    Rifas</a></li>
+						<li><a href="joueur.php?t=SWAT">Liste des    SWAT</a></li>
+                        <li><a href="joueur.php?t=Vagos">Liste des    Vagos</a></li>
+                        <li><a href="joueur.php?t=DEA">Liste des    DEA</a></li>
+					</ul>
+				</li>
+				<li><a href="#"><img src="{{ asset('gestion/img/icons/menu/vcard.png') }}" alt="" /> Classes</a>
+					<ul>
+						<li><a href="joueur.php?c=RegularPlayer">Liste des    JR</a></li>
+                        <li><a href="joueur.php?c=CIA">Liste des   CIA</a></li>
+                        <li><a href="joueur.php?c=Army">Liste des    Militaires</a></li>
+                        <li><a href="joueur.php?c=VIP">Liste des    VIP</a></li>
+                        <li><a href="joueur.php?c=Helpeur">Liste des    Helpeurs</a></li>
+					</ul>
+				</li>
+                <li><a href="#"><img src="{{ asset('gestion/img/icons/menu/brush.png') }}" alt="" /> News</a>
+                    <ul>
+                        <li><a href="news.php?c=2">Liste des   news</a></li>
+                        <li><a href="news.php?c=2&nv">Créer une news</a></li>
+                        <li><a href="news.php?c=1">Liste des    catégories</a></li>
+                        <li><a href="news.php?c=1&nv">Créer une catégorie</a></li>
+                    </ul>
+                </li>
+                <li class="nosubmenu"><a href="maison.php"><img src="{{ asset('gestion/img/icons/menu/home.png') }}" alt="" /> Maison </a></li>
+				<li><a href="#"><img src="{{ asset('gestion/img/icons/menu/chart.png') }}" alt="" /> Boutique </a>
+					<ul>
+                        <li><a href="boutique.php?c=Top">Top votants</a></li>
+                        <li><a href="boutique.php">Log d'achat</a></li>
+                        <li><a href="paypal.php">Log paypal</a></li>
+
+					</ul>
+				</li>
+                <li><a href="#"><img src="{{ asset('gestion/img/icons/menu/user.png') }}" alt="" /> Administrateur </a>
+					<ul>
+                        <li><a href="joueur.php?c=Admin">Liste des administrateurs</a></li>
+                        <li><a href="connecte.php">Liste des connectés</a></li>
+                        <li><a href="banni.php">Liste des bannis</a></li>
+                        <li><a href="permanence.php">Permanence admin</a></li>
+                        <li><a href="helpeur.php">Planning helpeur</a></li>
+			            <li><a href="brute.php">Brute Force</a></li>
+                   </ul>
+				</li>
+  				  						 
+            </ul>
+            <a href="#collapse" id="menucollapse">&#9664;  Réduire la sidebar </a>
+
+        </div>
+		        <!--            
+					CONTENT 
+							--> 
+ <div id="content" class="black">
+{% block body %}{% endblock body %}
+	</div>
+	<div class="clean"></div>
+    </body>
+</html>

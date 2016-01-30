@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+ <div class="notif error">{{ "N'oubliez pas d'être déconnecté du serveur pour que l'ajout de points ou crédit soit effectif ! "|trans }} </div>
+            <h1>{% if solde is defined %}{{ solde }} {% endif %}{{ "Votez !"|trans }}</h1>
+            <p>{{ "Vous avez le choix entre des points InGame ou des crédits boutique. Les votes doivent être espacé de 3 heures pour RPG-paradize et 2 heures pour Root-Top !"|trans }}</p>
+            <p>{{ "Nouveauté, le membre ayant le plus voté pendant la semaine aura le privilège de participer à la réunion des administrateurs."|trans }}</p>
+            <form action="" method="post">
+                <input  name="score" value="{{ votesolde ~' points InGame'|trans }}" class="form" type="submit">
+                <input   name="solde" value="{{ votesolde ~' crédits boutique'|trans }}" class="form" type="submit">
+            </form>
+        </div>
+            <div id="clear"></div>
+
+{% endblock %}

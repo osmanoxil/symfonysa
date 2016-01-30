@@ -1,0 +1,44 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+
+    <div class="notif error">{{ "Veuillez être déconnecté du serveur pour faire un achat dans la boutique !"|trans }}</div>
+
+
+
+    <h1>{{ "Liste des achats"|trans }}</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>{{ "Avantage"|trans }}</th>
+            <th>{{ "Prix"|trans }}</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ "Rename Serveur"|trans }}</td>
+            <td>500 {{ "crédits"|trans }}</td>
+            <td><a href="{{ path('os_sarpg_store_rename') }}">{{ "Effectuer un rename"|trans }}</a></td>
+        </tr>
+        <tr>
+            <td>{{ "Statut CIA"|trans }}</td>
+            <td>500 {{ "crédit"|trans }}s</td>
+            <td><a href="{{ path('os_sarpg_store_cia') }}">{{ "Acheter le statut CIA"|trans }}</a></td>
+        </tr>
+        <tr>
+            <td>{{ "Statut JR"|trans }}</td>
+            <td>500 {{ "crédits"|trans }}</td>
+            <td><a href="{{ path('os_sarpg_store_jr') }}">{{ "Acheter le statut JR"|trans }}</a></td>
+        </tr>
+        <tr>
+            <td>{{ "Points InGame"|trans }}</td>
+            <td>100 {{ "crédits pour"|trans }} {{ twoptsprix*100 }} points</td>
+            <td><a href="{{ path('os_sarpg_store_pts') }}">{{ "Acheter des points"|trans }}</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <a href="#">{{ "Cliquez-ici pour acheter du crédit"|trans }}</a> | {{ "vous avez aussi la posibilité de faire des achats paypal via ce lien."|trans }}
+    <br><br>
+
+    {% endblock body %}

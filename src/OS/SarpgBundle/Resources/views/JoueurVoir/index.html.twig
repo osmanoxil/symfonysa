@@ -1,0 +1,129 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}  {% endblock title %}
+{% block body %}
+    {% for j in membre %}
+
+    <h1>{{ "Compte de "|trans }}{{ j.username }}</h1>
+            <div class="compte_mini nopt">
+                <h3>{{ "Statuts"|trans }}</h3>
+                <ul>
+
+                    <li><img src="{% if j.RegularPlayer == 1337 %}{{ asset('public/css/img/valide.png') }}{% else %}{{ asset('public/css/img/non.png') }}{% endif %}" alt=""> {{ "joueur Régulier"|trans }}</li>
+                    <li><img src="{% if j.cia == 1337 %}{{ asset('public/css/img/valide.png') }}{% else %}{{ asset('public/css/img/non.png') }}{% endif %}" alt=""> {{ "C.I.A"|trans }}</li>
+                    <li><img src="{% if j.army == 1337 %}{{ asset('public/css/img/valide.png') }}{% else %}{{ asset('public/css/img/non.png') }}{% endif %}" alt=""> {{ "Militaire"|trans }}</li>
+                    <li><img src="{% if j.vip== 1337 %}{{ asset('public/css/img/valide.png') }}{% else %}{{ asset('public/css/img/non.png') }}{% endif %}" alt=""> {{ "VIP"|trans }}</li>
+                </ul>
+            </div>
+            <div class="compte_mini nopt">
+                <h3>{{ "Team"|trans }}</h3>
+                <ul>
+                    {% if j.RAID == 1337 %}
+                        <li><img src="{{ asset('public/css/img/valide.png') }}" alt=""> RAID</li>
+                    {% elseif j.GROVE == 1337 %}
+                        <li><img src="{{ asset('public/css/img/valide.png') }}" alt=""> Grove</li>
+                    {% elseif j.BALLAS == 1337 %}
+                        <li><img src="{{ asset('public/css/img/valide.png') }}" alt=""> Ballas</li>
+                    {% else %}
+                         <li><img src="{{ asset('public/css/img/non.png') }}" alt=""> {{ "Aucune Team"|trans }}</li>
+                    {% endif %}
+                    {# Co-LEADER#}
+                    {% if j.CLRAID == 1337 %}
+                        <li><img src="{{ asset('public/css/img/valide.png') }}" alt="">{{ "Co-leader"|trans }}</li>
+                    {% elseif j.CLGROVE == 1337 %}
+                        <li><img src="{{ asset('public/css/img/valide.png') }}" alt="">{{ "Co-leader"|trans }}</li>
+                    {% elseif j.CLBALLAS == 1337 %}
+                        <li><img src="{{ asset('public/css/img/valide.png') }}" alt="">{{ "Co-leader "|trans }}</li>
+                    {% else %}
+                        <li><img src="{{ asset('public/css/img/non.png') }}" alt=""> {{ "Co-leader"|trans }}</li>
+                    {% endif %}
+                    {#leader#}
+                    {% if j.LRAID == 1337 %}
+                        <li><img src="{{ asset('public/css/img/valide.png') }}" alt="">{{ " Leader"|trans }}</li>
+                    {% elseif j.LGROVE == 1337 %}
+                        <li><img src="{{ asset('public/css/img/valide.png') }}" alt="">{{ " Leader"|trans }}</li>
+                    {% elseif j.LBALLAS == 1337 %}
+                        <li><img src="{{ asset('public/css/img/valide.png') }}" alt="">{{ " Leader"|trans }}</li>
+                    {% else %}
+                        <li><img src="{{ asset('public/css/img/non.png') }}" alt=""> {{ " Leader"|trans }}</li>
+                    {% endif %}
+
+                </ul>
+            </div>
+            <div class="compte_mini">
+                <h3>{{ "Compétences"|trans }}</h3>
+                <ul>
+                    <li><b>{{ "Terrorisme :"|trans }}</b> {{ j.tlevel }}</li>
+                    <li><b>{{ "Voleur :"|trans }}</b> {{ j.vlevel }}</li>
+                    <li><b>{{ "Policier :"|trans }}</b> {{ j.Plevel }}</li>
+                </ul>
+            </div>
+            <div class="compte_mini">
+                <h3>{{ "Argent"|trans }}</h3>
+                <ul>
+                    <li><b>{{ "Argent en poche :"|trans }}</b> {{ j.cash }}$</li>
+                    <li><b>{{ "Argent en banque :"|trans }}</b> {{ j.Bankcash }}$</li>
+                </ul>
+            </div>
+            <div class="compte_mini nopt">
+
+                <h3>{{ "achats"|trans }}</h3>
+                <ul>
+                    <li><img src="{{ asset('public/css/img/non.png') }}" alt=""> {{ "Ammunation clandestine"|trans }}</li>
+
+                    <li> </li>
+
+
+                    <li><img src="{{ asset('public/css/img/non.png') }}" alt=""> {{ "Chasseur de prime"|trans }}</li>
+                    <li> </li>
+
+                    <li><img src="{{ asset('public/css/img/non.png') }}" alt=""> {{ "Pack d'armes"|trans }}</li>
+                    <li> </li>
+
+                </ul></div>
+            <div class="compte_mini nopt">
+
+                <h3>{{ "Promo SARPG"|trans }}</h3>
+                <ul>
+                    <li><img src="{{ asset('public/css/img/non.png') }}" alt=""> {{ "Pack promo"|trans }}</li>
+                    <li> </li>
+
+                </ul></div>
+            {% if j.id == idCurrent %}
+            <div class="compte_mini nopt">
+                <h3>{{ "Vos maisons"|trans }}</h3>
+                <ul>
+                    <li><img src="{{ asset('public/css/img/non.png') }}" alt=""> {{ "Vous n'avez pas de maison !"|trans }}</li>
+                </ul>
+            </div>
+            {% endif %}
+            <div class="compte_mini">
+                <h3>{{ "Plus d'info"|trans }}</h3>
+                <ul>
+                    <li>{{ j.Level }}{{ " points"|trans }}</li>
+                    <li>{{ j.actif }}{{ "connexions sur le serveur"|trans }} </li>
+
+                </ul>
+            </div>
+            {% if j.id == idCurrent %}
+            <div class="compte_mini">
+                <h3>{{ "Espace Boutique"|trans }}</h3>
+                <ul>
+                    <li><b>{{ "Solde :"|trans }}</b> {{ j.solde }}</li>
+                    <li><b>{{ "Nombre de vote cette semaine :"|trans }}</b> {{ j.vote }}</li>
+                    <ul>
+                        {% set rpgexpiration = j.VoteTime+exprpg %}
+                        {% set rootexpiration = j.VoteTime+exproot %}
+                        <li><b>{{ "Dernier vote RPG-PARADIZE:"|trans }}</b> {{ j.VoteTime|date('d/m/y à G:i:s') }}</li>
+                        <li><b>{{ "Prochain vote RPG-PARADIZE:"|trans }}</b> {{ rpgexpiration|date('d/m/y à G:i:s') }}</li>
+                        <li><b>{{ "Dernier vote ROOT-TOP:"|trans }}</b> {{ j.VoteTime|date('d/m/y à G:i:s') }}</li>
+                        <li><b>{{ "Prochain vote ROOT-TOP:"|trans }}</b> {{rootexpiration|date('d/m/y à G:i:s') }}</li>
+                    </ul>
+                </ul>
+            </div>
+            {% endif %}
+
+        </div>
+    {% endfor %}
+
+{% endblock %}

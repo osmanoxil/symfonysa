@@ -1,0 +1,14 @@
+services:
+#    os_user.example:
+#        class: OS\UserBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+services:
+    os_user..security.interactive_login_listener:
+        class: OS\UserBundle\EventListener\UserListener
+        tags:
+            - { name: kernel.event_listener, event: security.interactive_login, method: setLocaleForAuthenticatedUser }
+
+    os_user..security.kernel_request_listener:
+        class: OS\UserBundle\EventListener\UserListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: setLocaleForUnauthenticatedUser }

@@ -1,0 +1,146 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}  {% endblock title %}
+{% block body %}
+
+
+            {# TOP MEILLEUR JOUEUR #}
+     <h1>{{ "Classement des 10 meilleurs joueurs"|trans }}</h1>
+            <table>
+                <thead>
+                <tr>
+                    <th>{{ "Classemen"|trans }}t</th>
+                    <th>{{ "Pseudo"|trans }}</th>
+                    <th>{{ "Score"|trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% set compteur = 1 %}
+                {% for L in level %}
+                    <tr>
+                        <td>{{ compteur }}</td>
+                        <td>{{ L.username }}</td>
+                        <td>{{ L.Level }} points</td>
+                    </tr>
+                {% set compteur = compteur + 1 %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br />
+            {#top policier#}
+            <h1>{{ "Classement des 10 meilleurs policiers"|trans }}</h1>
+            <table>
+                <thead>
+                <tr>
+                    <th>{{ "Classement"|trans }}</th>
+                    <th>{{ "Pseudo"|trans }}</th>
+                    <th>{{ "Niveau Policier"|trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% set compteur = 1 %}
+                {% for P in plevel %}
+                    <tr>
+                        <td>{{ compteur }}</td>
+                        <td>{{ P.username }}</td>
+                        <td>{{ P.PLEVEL }} </td>
+                    </tr>
+                    {% set compteur = compteur + 1 %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br />
+            {# VOLEUR #}
+            <h1>{{ "Classement des 10 meilleurs voleurs"|trans }}</h1>
+            <table>
+                <thead>
+                <tr>
+                    <th>{{ "Classement"|trans }}</th>
+                    <th>{{ "Pseudo"|trans }}</th>
+                    <th>{{ "Niveau Voleur"|trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% set compteur = 1 %}
+                {% for V in vlevel %}
+                    <tr>
+                        <td>{{ compteur }}</td>
+                        <td>{{ V.username }}</td>
+                        <td>{{ V.VLEVEL }} </td>
+                    </tr>
+                    {% set compteur = compteur + 1 %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br />
+            {#tlevel#}
+            <h1>{{ "Classement des 10 meilleurs terroriste"|trans }}</h1>
+            <table>
+                <thead>
+                <tr>
+                    <th>{{ "Classement"|trans }}</th>
+                    <th>{{ "Pseudo"|trans }}</th>
+                    <th>{{ "Niveau terroriste"|trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% set compteur = 1 %}
+                {% for T in tlevel %}
+                    <tr>
+                        <td>{{ compteur }}</td>
+                        <td>{{ T.username }}</td>
+                        <td>{{ T.TLEVEL }} </td>
+                    </tr>
+                    {% set compteur = compteur + 1 %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br />
+            {#bank#}
+            <h1>{{ "Classement des 10 meilleurs banquiers"|trans }}</h1>
+            <table>
+                <thead>
+                <tr>
+                    <th>{{ "Classement"|trans }}</th>
+                    <th>{{ "Pseudo"|trans }}</th>
+                    <th>{{ "Argent en banque"|trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% set compteur = 1 %}
+                {% for B in bank %}
+                    <tr>
+                        <td>{{ compteur }}</td>
+                        <td>{{ B.username }}</td>
+                        <td>{{ B.Bankcash }} </td>
+                    </tr>
+                    {% set compteur = compteur + 1 %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br />
+            {#actif#}
+            <h1>{{ "Classement des 10 meilleurs actifs"|trans }}</h1>
+            <table>
+                <thead>
+                <tr>
+                    <th>{{ "Classement"|trans }}</th>
+                    <th>{{ "Pseudo"|trans }}</th>
+                    <th>{{ "Nombre de connexion"|trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% set compteur = 1 %}
+                {% for A in bank %}
+                    <tr>
+                        <td>{{ compteur }}</td>
+                        <td>{{ A.username }}</td>
+                        <td>{{ A.actif }} </td>
+                    </tr>
+                    {% set compteur = compteur + 1 %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br />
+
+{% endblock %}

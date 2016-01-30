@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+
+        <div class="notif error">{{ "N'oubliez pas d'être déconnecté du serveur pour que l'ajout de points ou crédit soit effectif !"|trans }}</div>
+        <h1>{{ "Changer de pseudo"|trans }}</h1>
+        <p>{{ "Attention, vous êtes limités à cinq renames. Le rename vous coûtera 500 crédits, réfléchissez-bien avant de faire votre choix !"|trans }}</p>
+        <br>
+        {{ form_start(form) }}
+        {{ form_widget(form.username, {'attr': {'class': 'form'}}) }}
+        <br /><br/>
+        {{ form_widget(form.submit, {'attr': {'class': 'form'} }) }}
+        {{ form_end(form) }}
+
+{% endblock %}

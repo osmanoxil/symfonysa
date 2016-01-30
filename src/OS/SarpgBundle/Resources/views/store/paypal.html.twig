@@ -1,0 +1,30 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}  {% endblock title %}
+{% block body %}
+
+        <p> {{ "Ici vous pouvez faire un achat paypal.
+            Mais attention avant de faire toute transaction merci de vous munir de l'administrateur Kedore, Shooters, Izee, Ghost_Rider, Mick309.
+            voici le tableau des prix  :"|trans }}
+        </p><li>{{ "Statut Jr 10 euros"|trans }}</li>
+        <li>{{ "Statut CIA 10 euros"|trans }}</li>
+        <li>{{ "Pack Arme  2 euros"|trans }} </li>
+        <li>{{ "Pack promo  5 euros "|trans }}</li>
+        <li>{{ "Pack chaseur de prime 2 euros"|trans }} </li>
+        <li>{{ "100 crédit boutique 2 euros "|trans }}</li>
+
+        <br>
+    {{ "Le paiement s'effectue par forme de dons dés que l'administrateur aura reçu le paiment votre statut vous sera donné.
+        "|trans }}<p></p>
+
+
+
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input name="cmd" value="_s-xclick" type="hidden">
+            <input name="hosted_button_id" value="LMEUEGXR2BY7J" type="hidden">
+            <input src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne" border="0" type="image">
+            <img alt="" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" border="0" height="1" width="1">
+        </form>
+
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+{% if (membre == NULL)  %}
+    <div class="notif info">
+        {{ "Oups, vous êtes parti trop loin, c'est vide par ici !"|trans }}
+    </div>
+{% else %}
+    <h1>{{ "Classement"|trans }}</h1>
+    <p>{{ "Classement des joueurs inscrits sur le serveur !"|trans }}</p>
+    <table>
+        <thead>
+        <tr>
+            <th>{{ "Place"|trans }}</th>
+            <th>{{ "Joueur"|trans }}</th>
+            <th>{{ "Points"|trans }}</th>
+            <th>{{ "Joueur régulier"|trans }}</th>
+            <th>{{ "CIA"|trans }}</th>
+            <th>{{ "Militaire"|trans }}</th>
+            <th>{{ "VIP"|trans }}</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for m in membre %}
+        <tr>
+            <td>{{ compteur }}</td>
+            <td><a href="{{ path('os_sarpg_joueur_voir_me')~m.id }}">{{ m.username }}</a></td>
+            <td>{{ m.Level }}</td>
+            <td><img src="{% if m.RegularPlayer == 1337 %}{{ asset('public/css/img/valide.png') }}{% else %}{{ asset('public/css/img/non.png') }}{% endif %}" alt="Ok"></td>
+            <td><img src="{% if m.CIA == 1337 %}{{ asset('public/css/img/valide.png') }}{% else %}{{ asset('public/css/img/non.png') }}{% endif %}" alt="Ok"></td>
+            <td><img src="{% if m.Army == 1337 %}{{ asset('public/css/img/valide.png') }}{% else %}{{ asset('public/css/img/non.png') }}{% endif %}" alt="Ok"></td>
+            <td><img src="{% if m.VIP == 1337 %}{{ asset('public/css/img/valide.png') }}{% else %}{{ asset('public/css/img/non.png') }}{% endif %}" alt="Ok"></td>
+        </tr>
+            {% set compteur = compteur + 1 %}
+        {% endfor %}
+        </tbody>
+    </table>
+    <ul id="pager">
+        {% for i in range(page-1,page+3 ) %}
+            {% if i != 0 %}
+        <li class={% if i == page %}{{ "active" }}{% endif %}><a href="{{ path('os_sarpg_classement')~'page/'~i }}">{{ i }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}

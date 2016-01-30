@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <h1> {{ "Foires aux questions"|trans }}</h1>
+    <p>{{ "Vous vous posez une questions, vous êtes au bon endroit !"|trans }}</p>
+    <ul>
+        <li><a href="{{ path('os_sarpg_faq_metiers') }}">{{ "Les métiers"|trans }}</a></li>
+        <li><a href="{{ path('os_sarpg_faq_privilege') }}">{{ "Les statuts spéciaux"|trans }}</a></li>
+        <li><a href="{{ path('os_sarpg_faq_reglement') }}">{{ "Les règlement"|trans }}  </a></li>
+
+    </ul>
+{% endblock %}

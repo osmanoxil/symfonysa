@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+
+
+            <h1>{{ 'Résultat de la recherche'|trans }}</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>{{ "Joueur"|trans }}</th>
+            <th>{{ "Points"|trans }}</th>
+            <th>{{ "Action"|trans }}</th>
+        </tr>
+        </thead>
+        <tbody>
+       {% for s in search %}
+        <tr>
+            <td>{{ s.username }}</td>
+            <td>{{ s.Level }}</td>
+            <td><a href="{{ path('os_sarpg_joueur_voir_me') }}{{ s.id }}">{{ "Voir plus de détails !"|trans }}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

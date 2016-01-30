@@ -1,0 +1,349 @@
+{% extends '::gestion.html.twig' %}
+{% block body %}
+<h1><img src="{{ asset('gestion/img/icons/dashboard.png') }}" alt="" /> SARPG Panel</h1>
+		<div class="notif error bloc">Attention ! Il n'y a pas d'administrateur pour la prochaine permanence !  (16h)</div>		
+
+<div class="bloc left">
+    <div class="title">
+        Teams et classes
+    </div>
+    <div class="content">
+        <div class="left">
+            <table class="noalt">
+                <thead>
+                    <tr>
+                        <th colspan="2"><em>Teams</em></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-weight: bold;"><a href="joueur.php?t=Ballas">Ballas</a></td>
+						                        <td>12/20 joueurs</td>
+                    </tr>
+					<tr>
+                        <td style="font-weight: bold;"><a href="joueur.php?t=Biker">Biker'S</a></td>
+                                                <td>0/20 joueurs</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><a href="joueur.php?t=Groove">Groves</a></td>
+                                                <td>16/20 joueurs</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><a href="joueur.php?t=RAID">R.A.I.D</a></td>
+                                                <td>0/10 joueurs</td>
+                    </tr>
+					<tr>
+                        <td style="font-weight: bold;"><a href="joueur.php?t=Rifa">Rifa</a></td>
+                                                <td>1/20 joueurs</td>
+                    </tr>
+					<tr>
+                        <td style="font-weight: bold;"><a href="joueur.php?t=SWAT">SWAT</a></td>
+                                                <td>18/10 joueurs</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><a href="joueur.php?t=Vagos">Vagos</a></td>
+                                                <td>0/20 joueurs</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><a href="joueur.php?t=DEA">DEA</a></td>
+                                                <td>0/20 joueurs</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="right">
+            <table class="noalt">
+                <thead>
+                    <tr>
+                        <th colspan="2"><em>Classes</em></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-weight: bold;"><a href="joueur.php?c=RegularPlayer">Joueur Régulier</a></td>
+                                                <td>1317 joueurs</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><a href="joueur.php?c=CIA">CIA</a></td>
+                                                <td>804 joueurs</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><a href="joueur.php?c=Army">Militaire</a></td>
+                                                <td>30/50 joueurs</td>
+                    </tr>
+					<tr>
+                        <td style="font-weight: bold;"><a href="joueur.php?c=VIP">VIP</a></td>
+                                                <td>38 joueurs</td>
+                    </tr>
+					<tr>
+                        <td style="font-weight: bold;"><a href="joueur.php?c=Helpeur">Helpeur</a></td>
+                                                <td>2 joueurs</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="cb"></div>
+    </div>
+</div>
+
+<div class="bloc right">
+    <div class="title">
+        Liste des derniers abus
+    </div>
+    <div class="content">
+           		    <table class="noalt">
+                <thead>
+                    <tr>
+                        <th colspan="4"><em>Abus</em></th>
+                    </tr>
+                </thead>
+                <tbody>
+					                    <tr>
+                        <td style="font-weight: bold;">Kedore</td>
+                        <td>Modificaction du score</td>
+                        <td>-50000</td>
+						<td>2016-01-25 00:02:26</td>
+                    </tr>
+					                    <tr>
+                        <td style="font-weight: bold;">Kedore</td>
+                        <td>Modificaction du score</td>
+                        <td>100000</td>
+						<td>2016-01-24 23:56:32</td>
+                    </tr>
+					                    <tr>
+                        <td style="font-weight: bold;">Kedore</td>
+                        <td>Argents Ajouté</td>
+                        <td>1000000</td>
+						<td>2016-01-04 21:53:36</td>
+                    </tr>
+					                    <tr>
+                        <td style="font-weight: bold;">xVersace</td>
+                        <td>Argents Ajouté</td>
+                        <td>35</td>
+						<td>2015-12-27 19:31:01</td>
+                    </tr>
+					                    <tr>
+                        <td style="font-weight: bold;">Madrane.</td>
+                        <td>Avertissement supprimer</td>
+                        <td>Non-renseigné</td>
+						<td>2015-12-25 23:37:16</td>
+                    </tr>
+					                </tbody>
+			</table>
+		       </div>
+</div>
+ 
+
+
+
+
+<div class="bloc right">
+    <div class="title">
+      Choix de la langue  panel
+    </div>
+    <div class="content">
+        <a  href="?lang=fr" class="shortcut">
+            <img src="img/icons/drapeau/fr.png" alt="" width="15" height="15"  />
+            français
+        </a>
+        <a href="?lang=en"  class="shortcut">
+            <img src="img/icons/drapeau/gb.png" alt=""  width="15" height="15"/>
+            Anglais 
+        </a>
+         
+    </div>
+</div>
+ 
+
+
+<div class="cb"></div>
+<!--
+		MENU RAPIDE
+						-->
+
+<div class="bloc">
+    <div class="title">
+       Menu rapide    </div>
+    <div class="content">
+        <a href="news.php" class="shortcut">
+            <img src="img/icons/font.png" alt="" />
+            News
+        </a>
+        <a href="joueur.php" class="shortcut">
+            <img src="img/icons/window.png" alt=""  width="32" height="32"/>
+            Liste des joueurs        </a>
+        <a href="banni.php" class="shortcut">
+            <img src="img/icons/warning.png" alt=""  width="32" height="32"/>
+ 			Liste des bannis         </a>
+        <a href="permanence.php" class="shortcut">
+            <img src="img/icons/calendar.png" alt=""  width="32" height="32"/>
+            Planning        </a>
+        <a href="reboot.php" class="shortcut">
+            <img src="img/icons/lock-open.png" alt=""  width="32" height="32"/>
+            Reboot
+        </a>
+        <div class="cb"></div>
+    </div>
+</div>
+
+
+<!--
+		PARAM 
+				-->
+<div class="bloc left">
+    <div class="title">
+        Changelog
+    </div>
+    <div class="content">
+    <b><i>fin Mai 2015</i></b>
+        <ul>
+            <li>Restauration de la validation avant reset.</li>
+            <li>Visualisation du nombre de commentaire directement sur le profil</li>
+            <li>Fonction commentaire pour le profil des joueurs </li>
+        </ul>
+        <br /><br />
+            <b><i>Mai 2015</i></b>
+        <ul>
+       		<li>Traduction du panel EN - FR </li>
+        	<li>Kick un joueur depuis le Monitoring </li>
+            <li>Reboot du server depuis le panel</li>
+            <li>Bannir les plage IP </li>
+            <li>Liste des brute force </li>
+            <li>Ajout des Log Serveur </li>
+            <li>Monitoring serveur</li>
+        </ul>
+        <br /><br />
+        <b><i>Octobre 2013</i></b>
+        <ul>
+            <li>Recherche panel plus performante</li>
+            <li>Ajout générateur de mot de passe automatique</li>
+            <li>Correction hashache mot de passe</li>
+            <li>Correction bug message permanence vide quand une permanence dure 2h</li>
+        </ul>
+        <br /><br />
+        <b><i>2 Septembre 2013</i></b>
+		<ul>
+			<li>Ajout de la raison de jail</li>
+			<li>Rectification nombre de membres dans les nouvelles teams</li>
+			<li>Lien de géolocalisation</li>
+			<li>Nouveau easter egg</li>
+		</ul>
+        <br /><br />
+		<b><i>29 Août 2013</i></b>
+		<ul>
+			<li>Ajout des Co leaders team Rifa et Biker</li>
+			<li>Amélioration graphique</li>
+			<li>Temps de jail différent en cas de jail suite à une déconnexion</li>
+			<li>Suppression MAP SARPG</li>
+			<li>Modification du chemin d'accès au panel</li>
+			<li>Correction chemin des icones pour les Bikers</li>
+			<li>Ajout de la liste d'admins associables</li>
+			<li>Modification reset de compte</li>
+		</ul>
+		<br /><br />
+		<b><i>Août 2013</i></b>
+		<ul>
+			<li>Ajout des teams Biker'S, Rifa et SWAT</li>
+			<li>Ajout de la Map interactive</li>
+			<li>Planning helpeur</li>
+			<li>Ajout sanction automatique</li>
+			<li>Ajout casier judiciaire</li>
+			<li>Modification reset de compte</li>
+		</ul>
+    </div>
+</div>
+ 
+ 
+    <div   class="bloc right">
+    <div class="title">
+        Monitoring serveur |  9 / 200 
+    </div>
+    <div class="content" style="max-height: 500px; overflow: auto;">
+ <div  id="globalchat" >
+      <table width="400">
+          <tr>
+              <td><b>Player ID</b></td>
+              <td><b>Nickname</b></td>
+              <td><b>Score</b></td>
+              <td><b>Ping</b></td>
+          </tr>
+                <tr>
+              <td>21</td>
+                <td> <a href="joueur.php?player=Rimk.">Rimk.</td>
+                 <td>11467</td>
+                 <td>30</td>
+                 <td><a href="index.php?kick=21&jeton=8e1e9795a6432329da3fbc314149a2b9157a8b4c">Kicker</a></td>
+          </tr>
+      
+                <tr>
+              <td>22</td>
+                <td> <a href="joueur.php?player=Evolution">Evolution</td>
+                 <td>46</td>
+                 <td>97</td>
+                 <td><a href="index.php?kick=22&jeton=8e1e9795a6432329da3fbc314149a2b9157a8b4c">Kicker</a></td>
+          </tr>
+      
+                <tr>
+              <td>23</td>
+                <td> <a href="joueur.php?player=Inas">Inas</td>
+                 <td>432</td>
+                 <td>88</td>
+                 <td><a href="index.php?kick=23&jeton=8e1e9795a6432329da3fbc314149a2b9157a8b4c">Kicker</a></td>
+          </tr>
+      
+                <tr>
+              <td>24</td>
+                <td> <a href="joueur.php?player=youyou_stunt">youyou_stunt</td>
+                 <td>61841</td>
+                 <td>154</td>
+                 <td><a href="index.php?kick=24&jeton=8e1e9795a6432329da3fbc314149a2b9157a8b4c">Kicker</a></td>
+          </tr>
+      
+                <tr>
+              <td>25</td>
+                <td> <a href="joueur.php?player=Julio_Tvr">Julio_Tvr</td>
+                 <td>31</td>
+                 <td>40</td>
+                 <td><a href="index.php?kick=25&jeton=8e1e9795a6432329da3fbc314149a2b9157a8b4c">Kicker</a></td>
+          </tr>
+      
+                <tr>
+              <td>26</td>
+                <td> <a href="joueur.php?player=Samir_Jonhson">Samir_Jonhson</td>
+                 <td>19070</td>
+                 <td>52</td>
+                 <td><a href="index.php?kick=26&jeton=8e1e9795a6432329da3fbc314149a2b9157a8b4c">Kicker</a></td>
+          </tr>
+      
+                <tr>
+              <td>27</td>
+                <td> <a href="joueur.php?player=Vito_Scarleta">Vito_Scarleta</td>
+                 <td>19</td>
+                 <td>113</td>
+                 <td><a href="index.php?kick=27&jeton=8e1e9795a6432329da3fbc314149a2b9157a8b4c">Kicker</a></td>
+          </tr>
+      
+                <tr>
+              <td>28</td>
+                <td> <a href="joueur.php?player=Lenny_Saylor">Lenny_Saylor</td>
+                 <td>6</td>
+                 <td>35</td>
+                 <td><a href="index.php?kick=28&jeton=8e1e9795a6432329da3fbc314149a2b9157a8b4c">Kicker</a></td>
+          </tr>
+      
+                <tr>
+              <td>29</td>
+                <td> <a href="joueur.php?player=MAria_nioRA">MAria_nioRA</td>
+                 <td>50</td>
+                 <td>87</td>
+                 <td><a href="index.php?kick=29&jeton=8e1e9795a6432329da3fbc314149a2b9157a8b4c">Kicker</a></td>
+          </tr>
+      
+      </table>
+ 
+            </tbody>
+        </div>
+        </div>
+</div>
+	</div>
+	{% endblock %}

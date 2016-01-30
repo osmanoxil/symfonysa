@@ -1,0 +1,13 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+        <div class="notif error">{{ "N'oubliez pas d'être déconnecté du serveur pour que l'ajout de points ou crédit soit effectif !"|trans }}</div>
+        <h1>{{ "Achat de points"|trans }}</h1>
+        <p>{{ "Achat de points InGame, 200 points coûte 100 crédits. Vous pouvez acheter entre 50 et 400 points."|trans }}</p>
+        <br>
+        {{ form_start(form) }}
+        {{ form_widget(form.level, {'attr': {'class': 'form'}}) }}
+        <br/><br/>
+        {{ form_widget(form.submit, {'attr': {'class': 'form'} }) }}
+        {{ form_end(form) }}
+
+{% endblock %}

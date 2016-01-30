@@ -1,0 +1,18 @@
+parameters:
+    developpeur: Osmanoxil
+    exprpg : 10800
+    exproot : 7200
+    votesolde : 5
+    votescore : 5
+    #boutique
+    prixrename: 500
+    prixcia: 500
+    prixjr: 500
+    twoptsprix: 2
+    #achat points
+    MaxPointsStore: 400
+    MinPointsStore: 50
+    #links
+    forumlink: http://forum.sarpg.fr/
+    rpglink : http://www.rpg-paradize.com/?page=vote&vote=39094
+    rootlink : http://www.root-top.com/topsite/gta/in.php?ID=4279

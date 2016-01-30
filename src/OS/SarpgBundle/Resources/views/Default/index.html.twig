@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+
+
+            <h1>{{ 'Les dernières news'|trans }}</h1>
+            <p>{{ 'Voici les dernières news concernant le serveur, le site et le forum !'|trans }} </p>
+            {% for n in news %}
+            <article class="newsAcc">
+                <header>
+                    <h1>{{ n.title }}</h1>
+                        <p>Le {{ n.date.format('d/m/y') }}, par {{ n.author }}</p>
+                </header>
+                <section>{{ n.text }}</section>
+            </article>
+            {% endfor %}
+
+{% endblock %}

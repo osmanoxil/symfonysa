@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+
+
+        <h1>{{ "Détail sur les statuts"|trans }}</h1>
+        <p>{{ "Vous trouverez ici des informations sur les différents statuts spéciaux de SARPG !"|trans }}</p>
+
+        <div class="ui-tabs ui-widget ui-widget-content ui-corner-all ui-tabs-vertical ui-helper-clearfix" id="tabs" style="margin: auto;">
+            <ul role="tablist" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+                <li aria-selected="true" aria-labelledby="ui-id-1" aria-controls="tabs-1" tabindex="0" role="tab" class="ui-state-default ui-tabs-active ui-state-active ui-corner-left"><a id="ui-id-1" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#tabs-1">Statut JR</a></li>
+                <li aria-selected="false" aria-labelledby="ui-id-2" aria-controls="tabs-2" tabindex="-1" role="tab" class="ui-state-default ui-corner-left"><a id="ui-id-2" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#tabs-2">Statut VIP</a></li>
+            </ul>
+            <div aria-hidden="false" aria-expanded="true" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-1" id="tabs-1">
+                <h2>{{ "Statut JR"|trans }}</h2>
+                <p>{{ "Le statut JR s'obtient à partir de 1.000 points et de 80 posts forum ou plus simplement par la boutique ! Ce statut vous permet d'obtenir un QG contenant gilet, vie et tec9 et des voitures réservées.
+                    De plus, pour intégrer une team, le statut JR est obligatoire."|trans }}</p>
+            </div>
+            <div aria-hidden="true" aria-expanded="false" style="display: none;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-2" id="tabs-2">
+                <h2>{{ "Statut VIP"|trans }}</h2>
+                <p>{{ "Le statut VIP s'obtient à partir de 10 000 points et de 400 posts forum. InGame, vous avez le droit à un chat réservé et à un désamorceur de véhicule piégé, chose qui peut s'avérer très utile !"|trans }}</p>
+            </div>
+        </div>
+{% endblock %}

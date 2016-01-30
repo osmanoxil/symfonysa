@@ -1,0 +1,16 @@
+os_gestion:
+    resource: "@OSGestionBundle/Resources/config/routing.yml"
+    prefix:   /admin
+os_user:
+    resource: "@OSUserBundle/Resources/config/routing.yml"
+    prefix:   /user
+os_sarpg:
+    resource: "@OSSarpgBundle/Resources/config/routing.yml"
+    prefix:   /{_locale}/
+    requirements:
+      _locale: en|fr|es|ar
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

@@ -1,0 +1,13 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+
+        <div class="notif error">{{ "N'oubliez pas d'être déconnecté du serveur pour que l'ajout de points ou crédit soit effectif !"|trans }}</div>
+        <h1>{{ "Aquérir le statut CIA "|trans }}</h1>
+        <p>{{ "Le statut CIA vous permet d'accéder à une classe de flic d'élite. Cet achat coûte 500 crédits."|trans }}</p>
+        <br>
+        {{ form_start(form) }}
+
+        {{ form_widget(form.submit, {'attr': {'class': 'form'} }) }}
+        {{ form_end(form) }}
+
+{% endblock %}
